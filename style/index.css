@@ -3,10 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+
 }
+
 header {
   height: 100%;
   width: 100%;
@@ -16,71 +25,109 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .card {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  min-width: 60%;
   min-height: 45%;
   background-color: hsl(244, 38%, 16%);
   border-radius: 10px;
 }
+
 .right-section {
-  flex:50%;
-  color:white;
+  flex: 1 0 50%;
   min-height: 100%;
-  background:  url(../images/image-header-desktop.jpg),  hsl(277, 64%, 61%);
-  background-blend-mode:multiply;
+  background: url(../images/image-header-desktop.jpg), hsl(277, 64%, 61%);
+  background-blend-mode: multiply;
   background-size: cover;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.left-section-content{
+
+.left-section-content {
   margin: 10%;
 }
+
 .left-section {
-  flex:50%;
-  display:flex;
+  flex: 1 0 50%;
+  display: flex;
   flex-direction: column;
-  color:white;
+  color: white;
+
 }
-.card-header{
+
+.card-header {
   font-family: 'Inter', sans-serif;
   font-size: 35px;
   font-weight: 700;
-
 }
-.card-content{
+
+.card-content {
   margin-right: 17%;
   margin-top: 7%;
 }
-.card-secondary-text{
+
+.card-secondary-text {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 14px;
   color: hsla(0, 0%, 100%, 0.6);
   line-height: 1.7em;
 }
-.card-footer{
+
+.card-footer {
   display: flex;
   flex-direction: row;
   margin-top: 20%;
   justify-content: space-between;
 }
-.number-text-element{
+
+.number-text-element {
   display: flex;
   flex-direction: column;
 }
-.number-element{
+
+.number-element {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 24px;
 }
-.text-element{
+
+.text-element {
   font-family: 'Inter', sans-serif;
   margin-top: 5%;
   font-weight: 400;
 }
-span{
-  color: hsl(277, 64%, 61%);
 
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column-reverse;
+    width: 90%;
+    height: auto;
+    margin-top: 10%;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    height: 30vh;
+  }
+
+  .right-section {
+    width: 100%;
+    min-height: 30vh;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+    vertical-align: bottom;
+  }
+
+  .left-section {
+    text-align: center;
+  }
+
+  .card-content {
+    margin-right: 0%;
+    margin-top: 7%;
+  }
 }
